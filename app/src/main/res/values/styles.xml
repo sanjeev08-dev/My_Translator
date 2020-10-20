@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="CircularProgressBar">
+        <item name="cpd_strokeSize">7dp</item>
+        <item name="cpd_strokeColors">@array/colors</item>
+        <item name="cpd_rotateDuration">1000</item>
+        <item name="cpd_transformDuration">1000</item>
+    </style>
+
+
+</resources>

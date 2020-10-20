@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Fragments.TextFragment">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/getTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:maxLines="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getTextLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/translateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="Translate" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/setTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/translateButton"
+        android:layout_marginTop="10dp"
+        android:hint="Output"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/setText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:maxLines="8" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/buttonCopy"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/setTextLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_copy"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/buttonSpeak"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/setTextLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="60dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_volume_up"
+        android:visibility="gone" />
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progressView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/translateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/CircularProgressBar" />
+</RelativeLayout>
